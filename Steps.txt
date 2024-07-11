@@ -1,21 +1,22 @@
 ##################----INSTALL TOMCAT----##################
 
-/opt sudo wget https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.65/bin/apache-tomcat-9.0.65.tar.gz
-sudo tar -xvf apache-tomcat-9.0.65.tar.gz
+/opt wget https://archive.apache.org/dist/tomcat/tomcat-10/v10.1.24/bin/apache-tomcat-10.1.24.tar.gz
 
-cd /opt/apache-tomcat-9.0.65/conf
+sudo tar -xvf apache-tomcat-10.1.24.tar.gz
+
+cd /opt/apache-tomcat-10.1.24.tar.gz/conf
 sudo vi tomcat-users.xml
 ---add-below-line at the end (2nd-last line)----
 <user username="admin" password="admin1234" roles="admin-gui, manager-gui"/>
 
 
 
-sudo ln -s /opt/apache-tomcat-9.0.65/bin/startup.sh /usr/bin/startTomcat
-sudo ln -s /opt/apache-tomcat-9.0.65/bin/shutdown.sh /usr/bin/stopTomcat
+sudo ln -s /opt/apache-tomcat-10.1.24/bin/startup.sh /usr/bin/startTomcat
+sudo ln -s /opt/apache-tomcat-10.1.24/bin/shutdown.sh /usr/bin/stopTomcat
 
 
 
-sudo vi /opt/apache-tomcat-9.0.65/webapps/manager/META-INF/context.xml
+sudo vi /opt/apache-tomcat-10.1.24/webapps/manager/META-INF/context.xml
 comment:
   <!-- Valve className="org.apache.catalina.valves.RemoteAddrValve"
   allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /> -->
@@ -32,7 +33,7 @@ sudo startTomcat
 
 
 
-sudo  cp /home/ubuntu/myagent/_work/5/s/target/petclinic.war /opt/apache-tomcat-9.0.65/webapps/
+sudo  cp /home/ubuntu/myagent/_work/5/s/target/petclinic.war /opt/apache-tomcat-10.1.24.tar.gz/webapps/
 
 ##################-----PIPELINE------###################
 
