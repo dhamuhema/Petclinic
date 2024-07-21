@@ -327,7 +327,6 @@
                     </includes>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
@@ -550,6 +549,11 @@
             <id>repository.spring.milestone</id>
             <name>Spring Milestone Repository</name>
             <url>https://repo.spring.io/milestone</url>
+        </repository>
+        <repository>
+            <id>maven-releases</id>
+            <name>maven-release</name>
+            <url>http://54.227.109.59:8081/repository/maven-releases/</url>
         </repository>
     </repositories>
 
